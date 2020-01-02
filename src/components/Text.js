@@ -4,7 +4,7 @@ class Text extends React.Component {
 
     render() {
         return (
-            <span>{this.props.value}</span>
+            <span className="text">{this.props.value}</span>
         );
     }
 }
