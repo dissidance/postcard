@@ -21,12 +21,18 @@ class Canvas extends React.Component {
         const { objects } = this.state;
         
         return (
-            <div className="canvas">
+            <div className="canvas" onClick={(e) => {this.toggleControlBar(e)}}>
                 {objects.map((elem, i) => {
                     return React.createElement(typeMap[elem.type], {value: elem.value, key: i});
                 })}
             </div>
         );
+    }
+
+    toggleControlBar(e) {
+        if(e.target.classList.contains('text')) return this.props.changeControl('text');
+        if(e.target.classList.contains('image')) return this.props.changeControl('image');
+        if(e.target.classList.contains('canvas')) return this.props.changeControl('canvas');
     }
 }
 
