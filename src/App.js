@@ -18,7 +18,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.objects);
     return (
       <div className="main">
         <Toolbar addComponent={this.addComponentToCanvas} />
