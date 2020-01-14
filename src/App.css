@@ -12,9 +12,13 @@
 }
 
 .canvas {
+  position: relative;
   width: 600px;
   height: 600px;
   background: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
   border: 2px solid black;
   box-shadow: 0 0 15px rgba(206, 203, 203, 0.5);
   overflow: hidden;
@@ -77,11 +81,13 @@ span {
 	border: 1px solid #cecece;
 	background: #F6F6f6;
   border-radius: 3px;
+  outline: none;
 }
 
 .input_control-bar {
   width: 40px;
   margin-left: 0;
+  outline: none;
 }
 
 .toolbar__add-image {
@@ -119,6 +125,19 @@ span {
 
 .section__input-heading {
   color: #fff;
+}
+
+.text {
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+}
+
+.textarea {
+  border-radius: 2px;
+  width: 80%;
+  border: 1px solid #cecece;
+  outline: none;
 }
 
 .wrapper {
